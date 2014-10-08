@@ -4,10 +4,10 @@ var YearView = Backbone.Marionette.ItemView.extend({
 		listofYear: function(){
 			var li = '';
 			for (var i = 1970; i <= 2015; i++) {
-				li+= '<span class="">' + i+ ' </span>';
+				li+= '<div class="year-wrapper"><span class="genre">' + i+ ' </span></div>';
 			};
 			return li;
 		}
 	},
-	className: 'position'
+	className: 'position content-holder'
 })
