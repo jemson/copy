@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<title>Watch Movie</title>
+    <meta http-equiv="cleartype" content="on">
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.0.min.js"></script>
+    <script type="text/javascript">
+        Parse.initialize("vVrv7QVwMxJ6O6kBwgrzPecesX8UgD1dak32FSev", "zqEDjfjB6jdA7jkQobSKAtsrnyKuVnINZ9yyv8LX");
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/movie.css">
+</head>
+<body class='background'>
+    <div id="push-region"></div>
+    <div id="container">
+        <header>
+            <div id="header-region"></div>
+            <div id="nav-region"></div>
+        </header>
+        <div id="sidebar-region"></div>
+        <div id="main-region"></div>
+    </div>
+    <div id="new-notification-region"></div>
+    <div id="dialog-region"></div>
+    
+    <script type="text/template" id='search'>
+        <input type="text" placeholder="Search Something">
+        <select name="search">
+          <option value="title">Title</option> 
+          <option value="action" selected>Actor</option>
+          <option value="director">Director</option>
+        </select>
+    </script>
+    <script type="text/template" id='content'>
+        <div class='content'data-click>
+            <div>
+               <img class='image-holder' src="<%= image%>">
+            </div>
+            <div class='movie-name'>
+                <%= name%>
+            </div>
+        </div>
+    </script>
+    
+    <script src='bower_components/jquery/dist/jquery.js'></script>
+    <script src='bower_components/lodash/dist/lodash.js'></script>
+    <script src='bower_components/backbone/backbone.js'></script>
+    <script src='bower_components/marionette/lib/backbone.marionette.js'></script>
+    <script src="scripts/views/search.js"></script>
+    <script src="scripts/views/movies.js"></script>
+    <script src="scripts/views/sidebar.js"></script>
+    <script src="scripts/views/genre.js"></script>
+    <script src="scripts/views/year.js"></script>
+    <script src="scripts/models/model.js"></script>
+    <script src="scripts/collections/collections.js"></script>
+    <script src="scripts/collections/category.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>
