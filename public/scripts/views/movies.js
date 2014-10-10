@@ -1,15 +1,23 @@
-var IndividualView = Backbone.Marionette.ItemView.extend({
-	template: '#content',
-	className: 'content-holder',
-	events: {
-		'click [data-click]': 'showDetails'
+var MoviesView = Backbone.Marionette.CollectionView.extend({
+	initialize: function(options){
+		if ( _.isUndefined(options) ) {
+			this.collection = new Movies();
+		} else {
+			switch (options.type) {
+				case 'cinema':
+					this.collection = new Movies().getFeatures();
+				break;
+				case 'featured':
+					this.collection = new Movies().getCinemas();
+				break;
+				default:
+					console.log('default')
+					this.collection = new Movies();
+				break;
+			}
+		}
+		
 	},
-	showDetails: function() {
-		this.trigger('data:test', this)
-	}
-});
-
-var ContentView = Backbone.Marionette.CollectionView.extend({
 	childView: IndividualView,
 	className: 'position'
 });

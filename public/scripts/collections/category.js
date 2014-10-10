@@ -1,8 +1,8 @@
 var Categories = Parse.Collection.extend({
-  model: category
+  model: Category
 });
 
-var query = new Parse.Query(category);
+var query = new Parse.Query(Category);
 query.descending('createdAt');
 
 

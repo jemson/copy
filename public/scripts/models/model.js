@@ -1,9 +1,13 @@
-var movie = Parse.Object.extend({
+var Movie = Parse.Object.extend({
+	initialize: function(options){
+		console.log(options);
+	},
   className: "movie"
 });
 
-var category = Parse.Object.extend({
+
+var Category = Parse.Object.extend({
   className: "category"
 });
 
-var nav = Backbone.Model.extend();
+var Nav = Backbone.Model.extend();
