@@ -11,6 +11,7 @@ App.addInitializer(function(){
 	var content = new ContentView({collection: movies});
 	var sidebar = new SideBarView({collection: navTest});
 
+	//nav manipulation
 	this.listenTo(sidebar, 'childview:data:click', function(iv){
 		switch ( iv.model.get('trigger') ) {
 			case 'movies':
@@ -44,7 +45,13 @@ App.addInitializer(function(){
 				App.mainRegion.show(content);
 			break;
 		}
-	})
+	});
+
+	this.listenTo(content, 'childview:data:test', function(iv){
+		var id = iv.model.id;
+		console.log(iv.model.id);
+		console.log("click");
+	});
 
 	App.headerRegion.show(search);
 	App.mainRegion.show(content);

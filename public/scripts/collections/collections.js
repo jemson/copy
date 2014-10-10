@@ -22,7 +22,6 @@ cinema.fetch();
 cinema.fetch({
 	success: function(data){
 	defer.resolve(data);
-	console.log(data);
 	}
 });
 
@@ -34,7 +33,6 @@ featured.fetch();
 featured.fetch({
 	success: function(data){
 	defer.resolve(data);
-	console.log(data);
 	}
 });
 
@@ -61,3 +59,11 @@ var navTest = new NavCollection([
 	{name: 'Countries', url: '#Countries', trigger: 'countries'},
 	{name: 'Language', url: '#Language', trigger: 'language'},
 ]);
+
+var query2 = new Parse.Query(movie);
+query2.equalTo('objectId', id);
+query2.find({
+	success: function (results) {
+		console.log(results);
+	}
+})
