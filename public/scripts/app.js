@@ -7,12 +7,11 @@ App.addRegions({
 });
 
 App.addInitializer(function(){
-console.log("before");
 });
 
 App.on('start', function(){
 	App.headerRegion.show(new SearchView());
-	App.mainRegion.show(new MoviesView());
+	App.mainRegion.show(new HomeView());
 	App.sidebarRegion.show(new SideBarView());
 });
 

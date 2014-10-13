@@ -5,6 +5,6 @@ var IndividualView = Backbone.Marionette.ItemView.extend({
 		'click [data-click]': 'showDetails'
 	},
 	showDetails: function() {
-		this.trigger('data:test', this)
+		App.mainRegion.show(new DetailView({model:this.model}));
 	}
 });

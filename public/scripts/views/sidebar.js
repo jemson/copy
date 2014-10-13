@@ -6,7 +6,6 @@ var SideBarIndividual = Backbone.Marionette.ItemView.extend({
 		'click.nav-li' : 'dataClick'
 	},
 	dataClick: function(){
-		console.log(this.model.get('trigger'));
 		switch ( this.model.get('trigger') ) {
 			case 'movies':
 				var content = new MoviesView();
@@ -34,8 +33,10 @@ var SideBarIndividual = Backbone.Marionette.ItemView.extend({
 			case 'language':
 				console.log("language");
 			break;
+			default:
+				var content = new HomeView();
+				App.mainRegion.show(content);
 		}
-		// this.trigger('data:click', this)
 	}
 });
 

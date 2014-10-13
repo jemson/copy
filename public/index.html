@@ -31,6 +31,16 @@
           <option value="director">Director</option>
         </select>
     </script>
+    <script type="text/template" id='home'>
+        <div>
+            Featured
+            <div id="featured-region"></div>
+        </div>
+        <div>
+            Cinema
+            <div id="cinema-region"></div>
+        </div>
+    </script>
     <script type="text/template" id='content'>
         <div class='content'data-click>
             <div>
@@ -41,6 +51,28 @@
             </div>
         </div>
     </script>
+    <script type="text/template" id='details'>
+        <div class='content'>
+            <div>
+               <img class='image-holder' src="<%= image%>">
+            </div>
+        </div>
+        <div>
+            <div >
+                <ul>
+                    <li>Directed by: <%= details.directed_by%></li>
+                    <li>Year: <%= year%> | Duration: <%= details.duration%> min.</li>
+                    <li>Genre: <%= showGenre()%></li>
+                    <li>Starring: </li>
+                    <li>Country: <%= details.country%></li>
+                    <li>Language: <%= details.language%></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            description
+        </div> 
+    </script>
     
     <script src='bower_components/jquery/dist/jquery.js'></script>
     <script src='bower_components/lodash/dist/lodash.js'></script>
@@ -50,14 +82,16 @@
     <script src="scripts/views/movie.js"></script>
     <script src="scripts/views/movies.js"></script>
     <script src="scripts/views/sidebar.js"></script>
-    <script src="scripts/views/genre.js"></script>\
+    <script src="scripts/views/genre.js"></script>
     <script src="scripts/views/genres.js"></script>
     <script src="scripts/views/year.js"></script>
+    <script src="scripts/views/home.js"></script>
+    <script src="scripts/views/empty.js"></script>
     <script src="scripts/models/model.js"></script>
+   <script src="scripts/views/detail.js"></script>
     <script src="scripts/collections/collections.js"></script>
     <script src="scripts/collections/navs.js"></script>
     <script src="scripts/collections/category.js"></script>
     <script src="scripts/app.js"></script>
-     <script src="scripts/router.js"></script>
 </body>
 </html>
