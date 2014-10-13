@@ -5,6 +5,7 @@ var GenreIndividualView = Backbone.Marionette.ItemView.extend({
 		'click.genre-wrapper': 'getGenre'
 	},
 	getGenre: function(){
-		console.log(this.model);
+		var content = new MoviesView({genre:this.model.get('type')});
+		App.mainRegion.show(content);
 	}
 });

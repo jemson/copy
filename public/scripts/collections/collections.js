@@ -32,5 +32,16 @@ var Movies = Parse.Collection.extend({
 		getMovie.fetch();
 
 		return getMovie;
-	}
+	},
+
+	getMovieByDetails: function(genre){
+		console.log(genre);
+		this.query.equalTo('genre', genre);
+
+		var getGenre = this.query.collection();
+		getGenre.fetch();
+
+		return getGenre;
+	},
+
 });
