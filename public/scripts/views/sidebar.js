@@ -1,5 +1,5 @@
 var SideBarIndividual = Backbone.Marionette.ItemView.extend({
-	template: _.template('<%=name%>'),
+	template: _.template('<img class="icon" src="<%=images%>"><%=name%>'),
 	tagName:'li trigger-click',
 	className: 'nav-li',
 	events: {
@@ -43,14 +43,14 @@ var SideBarIndividual = Backbone.Marionette.ItemView.extend({
 var SideBarView = Backbone.Marionette.CollectionView.extend({
 	initialize: function(){
 		this.collection = new NavCollection([
-			{name: 'Home', url: '#Home', trigger: 'home'},
-			{name: 'Movies', url: '#Movies', trigger: 'movies'},
-			{name: 'Genres', url: '#Genres', trigger: 'genres'},
-			{name: 'Cinema', url: '#Cinema', trigger: 'cinema'},
-			{name: 'Featured', url: '#Featured', trigger: 'featured'},
-			{name: 'Years', url: '#Years', trigger: 'years'},
-			{name: 'Countries', url: '#Countries', trigger: 'countries'},
-			{name: 'Language', url: '#Language', trigger: 'language'},
+			{name: 'Home', url: '#Home', trigger: 'home', images: 'images/home.png'},
+			{name: 'Movies', url: '#Movies', trigger: 'movies', images: 'images/movies.png'},
+			{name: 'Genres', url: '#Genres', trigger: 'genres', images: 'images/video.png'},
+			{name: 'Cinema', url: '#Cinema', trigger: 'cinema', images: 'images/cinema.png'},
+			{name: 'Featured', url: '#Featured', trigger: 'featured', images: 'images/star.png'},
+			{name: 'Years', url: '#Years', trigger: 'years', images: 'images/year.png'},
+			{name: 'Countries', url: '#Countries', trigger: 'countries', images: 'images/three.png'},
+			{name: 'Language', url: '#Language', trigger: 'language', images: 'images/group.png'},
 		]);
 	},
 	childView: SideBarIndividual,

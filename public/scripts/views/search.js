@@ -2,6 +2,7 @@ var SearchView = Backbone.Marionette.ItemView.extend({
 	initialize: function(){
 		this.collection = new Movies();
 	},
+	className: 'small-6 row right',
 	template: '#search',
 	ui: {
 		text : 'input',

@@ -25,12 +25,16 @@
     <div id="dialog-region"></div>
     
     <script type="text/template" id='search'>
-        <input type="text" placeholder="Search Something">
-        <select name="search">
-          <option value="title">Title</option> 
-          <option value="actor">Actor</option>
-          <option value="director">Director</option>
-        </select>
+        <div class="columns small-13">
+            <input type="text" placeholder="Search Something">
+        </div>
+        <div class="columns small-8">
+            <select name="search">
+              <option value="title">Title</option> 
+              <option value="actor">Actor</option>
+              <option value="director">Director</option>
+            </select>
+        </div>
     </script>
     <script type="text/template" id='home'>
         <div class="row">
@@ -57,26 +61,32 @@
         </div>
     </script>
     <script type="text/template" id='details'>
-        <div class='content row'>
+    <div class="row">
+        <div class='columns content small-5'>
             <div>
                <img class='image-holder' src="<%= image%>">
             </div>
         </div>
-        <div class="row">
-            <div >
-                <ul>
-                    <li>Directed by: <%= details.directed_by%></li>
-                    <li>Year: <%= year%> | Duration: <%= details.duration%> min.</li>
-                    <li>Genre: <%= showGenre()%></li>
-                    <li>Starring: </li>
-                    <li>Country: <%= details.country%></li>
-                    <li>Language: <%= details.language%></li>
-                </ul>
+        <div class="columns small-18">
+            <div class="content-description details-wrapper">
+                Directed by: <span class="details"><%= details.directed_by%></span>
+                <br>
+                Year: <span class="details"><%= year%></span> | Duration: <span class="details"><%= details.duration%> min.</span>
+                <br>
+                Genre: <span class="details"><%= showGenre()%></span>
+                <br>
+                Starring: <span class="details"><%= showActors()%></span>
+                <br>
+                Country:<span class="details"><%= details.country%></span>
+                <br>
+                Language: <span class="details"><%= details.language%></span>
+                <br>
             </div>
+            <div class="content-description description">
+                <%= details.description%>
+            </div> 
         </div>
-        <div>
-            description
-        </div> 
+    </div>
     </script>
     
     <script src='bower_components/jquery/dist/jquery.js'></script>

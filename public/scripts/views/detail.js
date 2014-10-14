@@ -1,6 +1,6 @@
 var DetailView = Backbone.Marionette.ItemView.extend({
 	template: '#details',
-	className: 'position',
+	className: 'small-13 columns',
 	serializeData: function(){
 		var data = {};
 		data =  _.partial(this.serializeModel, this.model).apply(this, arguments);
@@ -10,7 +10,10 @@ var DetailView = Backbone.Marionette.ItemView.extend({
 	},
 	templateHelpers: {
 		showGenre: function(){
-			return this.details.genre.toString().split(',').join(', ');
+			return this.genre.toString().split(',').join(', ');
+		},
+		showActors: function(){
+			return this.details.actor.toString().split(',').join(', ');
 		}
 	}
 });

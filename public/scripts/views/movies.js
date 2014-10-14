@@ -1,10 +1,12 @@
-var MoviesView = Backbone.Marionette.CollectionView.extend({
+var MoviesView = Backbone.Marionette.CompositeView.extend({
 	initialize: function(options){
 		if ( _.isUndefined( options ) ) {
 			this.collection = new Movies();
-		} else if ( options.type ) {
-			switch ( options.type ) {
+		} else if( options.types ){
+			console.log( options.types );
+			switch ( options.types ) {
 				case 'cinema':
+					console.log(options.types);
 					this.collection = new Movies().getCinemas();
 				break;
 				case 'featured':
@@ -24,5 +26,6 @@ var MoviesView = Backbone.Marionette.CollectionView.extend({
 	},
 	// emptyView: EmptyView,
 	childView: IndividualView,
-	className: 'small-13 columns'
+	template: _.template('<div class="movie-font">Movie</div>'),
+	className: 'small-13 columns home-wrapper2'
 });

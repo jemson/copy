@@ -1,5 +1,5 @@
 var YearView = Backbone.Marionette.ItemView.extend({
-	template: _.template('<%=listofYear()%>'),
+	template: _.template('<div class="movie-font">Year</div><%=listofYear()%>'),
 	templateHelpers: {
 		listofYear: function(){
 			var li = '';
@@ -17,5 +17,5 @@ var YearView = Backbone.Marionette.ItemView.extend({
 		var content = new MoviesView({year:year});
 		App.mainRegion.show(content);
 	},
-	className: 'small-12 columns'
+	className: 'small-12 columns home-wrapper2'
 });
