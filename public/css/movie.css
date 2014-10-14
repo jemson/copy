@@ -13,7 +13,6 @@
 	margin: 0px 30px 0px 0px;
 }
 .content {
-	float:left;
 	background: #111111;
 	border: 1px solid #3A3A3A;
 	margin: auto;
@@ -40,13 +39,20 @@
 .home-wrapper {
 	max-width: 45%;
 }
+.movie-font {
+	font-size: 1.5em;
+	font-weight: bold;
+	padding-left: 7px;
+	color: #AADD44;
+}
 .nav-holder {
 	position: absolute;
-	left: 0;
-	top: 12%;
+	left: 15%;
+	top: 0;
 	right: 0;
 	list-style: none;
 	max-width: 30%;
+	margin: 24px 0px 0px 0px;
 }
 .nav-li {
 	border-bottom: 1px solid #1B1B1B;

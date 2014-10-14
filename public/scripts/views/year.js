@@ -4,7 +4,7 @@ var YearView = Backbone.Marionette.ItemView.extend({
 		listofYear: function(){
 			var li = '';
 			for (var i = 1970; i <= 2015; i++) {
-				li+= '<div data-year class="year-wrapper"><span class="genre">' + i + '</span></div>';
+				li+= '<div data-year class="year-wrapper small-3 columns"><span class="genre">' + i + '</span></div>';
 			};
 			return li;
 		}
@@ -17,5 +17,5 @@ var YearView = Backbone.Marionette.ItemView.extend({
 		var content = new MoviesView({year:year});
 		App.mainRegion.show(content);
 	},
-	className: 'position content-holder'
+	className: 'small-12 columns'
 });

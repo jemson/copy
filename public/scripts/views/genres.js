@@ -1,4 +1,4 @@
 var GenreCollectionView = Backbone.Marionette.CollectionView.extend({
 	childView: GenreIndividualView,
-	className: 'position'
+	className: 'small-13 columns'
 });

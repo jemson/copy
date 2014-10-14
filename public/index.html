@@ -9,6 +9,7 @@
         Parse.initialize("vVrv7QVwMxJ6O6kBwgrzPecesX8UgD1dak32FSev", "zqEDjfjB6jdA7jkQobSKAtsrnyKuVnINZ9yyv8LX");
     </script>
     <link rel="stylesheet" type="text/css" href="css/movie.css">
+    <link rel="stylesheet" type="text/css" href=".tmp/css/main.css">
 </head>
 <body class='background'>
     <div id="push-region"></div>
@@ -32,17 +33,21 @@
         </select>
     </script>
     <script type="text/template" id='home'>
-        <div>
-            Featured
+        <div class="row">
+            <div class="movie-font">
+                Featured
+            </div>
             <div id="featured-region"></div>
         </div>
-        <div>
-            Cinema
+        <div class="row">
+            <div class="movie-font">
+                Cinema
+            </div>
             <div id="cinema-region"></div>
         </div>
     </script>
     <script type="text/template" id='content'>
-        <div class='content'data-click>
+        <div class='content small-5 columns'data-click>
             <div>
                <img class='image-holder' src="<%= image%>">
             </div>
@@ -52,12 +57,12 @@
         </div>
     </script>
     <script type="text/template" id='details'>
-        <div class='content'>
+        <div class='content row'>
             <div>
                <img class='image-holder' src="<%= image%>">
             </div>
         </div>
-        <div>
+        <div class="row">
             <div >
                 <ul>
                     <li>Directed by: <%= details.directed_by%></li>

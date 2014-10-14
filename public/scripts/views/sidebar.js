@@ -55,5 +55,5 @@ var SideBarView = Backbone.Marionette.CollectionView.extend({
 	},
 	childView: SideBarIndividual,
 	tagName: 'ul',
-	className: 'nav-holder'
+	className: 'nav-holder columns'
 })

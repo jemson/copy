@@ -18,12 +18,11 @@ var MoviesView = Backbone.Marionette.CollectionView.extend({
 			this.collection = new Movies().getMovieByYear( +options.year );
 		} else if ( options.genre ) {
 			this.collection = new Movies().getMovieByDetails( options.genre );
-		} else {
+		} else if ( options.searched ) {
 			this.collection = options.searched;
 		}
-
 	},
 	// emptyView: EmptyView,
 	childView: IndividualView,
-	className: 'position'
+	className: 'small-13 columns'
 });

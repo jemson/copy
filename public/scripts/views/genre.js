@@ -1,6 +1,6 @@
 var GenreIndividualView = Backbone.Marionette.ItemView.extend({
 	template: _.template('<div data-genre class="genre-wrapper"><span class="genre"><%= type%></span></div>'),
-	className: 'content-holder',
+	className: 'small-4 columns',
 	events: {
 		'click.genre-wrapper': 'getGenre'
 	},

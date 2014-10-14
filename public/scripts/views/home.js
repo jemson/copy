@@ -4,7 +4,7 @@ var HomeView = Backbone.Marionette.LayoutView.extend({
 		cinemaRegion: '#cinema-region',
 		featuredRegion: '#featured-region'
 	},
-	className:'position home-wrapper',
+	className:'small-13 columns',
 	onShow: function(){
 		var featuredView = new FeaturedView();
 		this.featuredRegion.show(featuredView);
@@ -15,7 +15,7 @@ var HomeView = Backbone.Marionette.LayoutView.extend({
 });
 
 var FeaturedIndividual = Backbone.Marionette.ItemView.extend({
-	template: _.template('<div class="content" data-click><div><img class="image-holder" src="<%= image%>"></div><div class="movie-name"><%= name%></div></div>')
+	template: _.template('<div class="content small-5 columns" data-click><div><img class="image-holder" src="<%= image%>"></div><div class="movie-name"><%= name%></div></div>')
 });
 
 var FeaturedView = Backbone.Marionette.CollectionView.extend({
@@ -29,7 +29,7 @@ var FeaturedView = Backbone.Marionette.CollectionView.extend({
 
 
 var CinemaIndividual = Backbone.Marionette.ItemView.extend({
-	template: _.template('<div class="content" data-click><div><img class="image-holder" src="<%= image%>"></div><div class="movie-name"><%= name%></div></div>')
+	template: _.template('<div class="content small-5 columns" data-click><div><img class="image-holder" src="<%= image%>"></div><div class="movie-name"><%= name%></div></div>')
 });
 
 var CinemaView = Backbone.Marionette.CollectionView.extend({

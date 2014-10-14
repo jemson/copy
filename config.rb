@@ -1,4 +1,4 @@
 project_path = "public/"
-css_dir = "css"
-sass_dir = "styles"
+css_dir = ".tmp/css"
+sass_dir = "style"
 javascripts_dir = "scripts"

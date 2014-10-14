@@ -18,10 +18,6 @@ module.exports = function(grunt){
         files: ['public/styles/**/*.scss'],
         tasks: ['compass']
       },
-      test: {
-        files: ['tests/spec/**/*.js'],
-        tasks: ['test']
-      },
     },
     clean: {
         dist: ['public/.tmp', 'dist/*'],
@@ -31,21 +27,8 @@ module.exports = function(grunt){
         options: {
             port: 8000,
             hostname: 'localhost',
-           // livereload: true,
+            livereload: true
         },
-        // test: {
-        //     options: {
-        //         port: 8001,
-        //   target: 'http://localhost:8001/test.html',
-        //       open: true,
-        //         middleware: function (connect) {
-        //             return [
-        //                 connect.static('tests'),
-        //                 connect.static('public')
-        //             ];
-        //         }
-        //     }
-        // },
         server: {
             options: {
               open: true,
@@ -61,7 +44,7 @@ module.exports = function(grunt){
 
   grunt.registerTask('server', [
     'clean:server',
-    'connect:server',
+    'compass',
     'watch'
   ]);
 
