@@ -1,6 +1,5 @@
 var MoviesView = Backbone.Marionette.CollectionView.extend({
 	initialize: function(options){
-
 		if ( _.isUndefined( options ) ) {
 			this.collection = new Movies();
 		} else if ( options.type ) {
@@ -15,12 +14,14 @@ var MoviesView = Backbone.Marionette.CollectionView.extend({
 					this.collection = new Movies();
 				break;
 			}
-		} else if (options.year){
+		} else if ( options.year ) {
 			this.collection = new Movies().getMovieByYear( +options.year );
-		} else {
-			console.log(options.genre);
+		} else if ( options.genre ) {
 			this.collection = new Movies().getMovieByDetails( options.genre );
+		} else {
+			this.collection = options.searched;
 		}
+
 	},
 	// emptyView: EmptyView,
 	childView: IndividualView,

@@ -4,7 +4,7 @@ var HomeView = Backbone.Marionette.LayoutView.extend({
 		cinemaRegion: '#cinema-region',
 		featuredRegion: '#featured-region'
 	},
-	className:'position content-holder',
+	className:'position home-wrapper',
 	onShow: function(){
 		var featuredView = new FeaturedView();
 		this.featuredRegion.show(featuredView);

@@ -37,6 +37,9 @@
 .content-holder {
 	max-width: 50%;
 }
+.home-wrapper {
+	max-width: 45%;
+}
 .nav-holder {
 	position: absolute;
 	left: 0;

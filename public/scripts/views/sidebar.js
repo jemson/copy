@@ -16,11 +16,11 @@ var SideBarIndividual = Backbone.Marionette.ItemView.extend({
 				App.mainRegion.show(content);
 			break;
 			case 'cinema':
-				var content = new MoviesView({type:"cinema"});
+				var content = new MoviesView({types:"cinema"});
 				App.mainRegion.show(content);
 			break;
 			case 'featured':
-				var content = new MoviesView({type:"featured"});
+				var content = new MoviesView({types:"featured"});
 				App.mainRegion.show(content);
 			break;
 			case 'years':
@@ -28,7 +28,7 @@ var SideBarIndividual = Backbone.Marionette.ItemView.extend({
 				App.mainRegion.show(content);
 			break;
 			case 'countries':
-				console.log("countries");
+				var content = new CountriesView();
 			break;
 			case 'language':
 				console.log("language");

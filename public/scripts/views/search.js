@@ -1,4 +1,7 @@
 var SearchView = Backbone.Marionette.ItemView.extend({
+	initialize: function(){
+		this.collection = new Movies();
+	},
 	template: '#search',
 	ui: {
 		text : 'input',
@@ -7,9 +10,26 @@ var SearchView = Backbone.Marionette.ItemView.extend({
 	events: {
 		'keyup' : 'findModel',
 	},
-	findModel: function(){
-		console.log(this.collection);
-		console.log(this.ui.text.val());
-		console.log(this.ui.select.val());
+	findModel: function(e){
+		var text = this.ui.text.val();
+		var attr = this.ui.select.val();
+			
+		if ( e.keyCode == 13) {
+
+			switch (attr) {
+				case 'title':
+					var results = this.collection.searchForTitle(text);
+				break;
+				case 'director':
+					var results = this.collection.searchForDirector(text);
+				break;
+				case 'actor':
+					var results = this.collection.searchForActor(text);
+				break;
+			}
+			
+			var content = new MoviesView({searched: results});
+			App.mainRegion.show(content);
+		} 
 	}
 });
