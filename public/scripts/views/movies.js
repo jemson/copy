@@ -24,8 +24,7 @@ var MoviesView = Backbone.Marionette.CompositeView.extend({
 			this.collection = options.searched;
 		}
 	},
-	// emptyView: EmptyView,
-	childView: IndividualView,
+	childView: MovieIndividualView,
 	template: _.template('<div class="movie-font">Movie</div>'),
 	className: 'small-13 columns home-wrapper2'
 });

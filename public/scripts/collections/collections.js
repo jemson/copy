@@ -46,14 +46,6 @@ var Movies = Parse.Collection.extend({
 		return getGenre;
 	},
 
-	// getMovieByCountry: function(){
-	// 	this.filter(function( model ){
-	// 		console.log(model.get( 'details' ))
-	// 	});
-
-	// 	// return countries;
-	// },
-
 	//search for title
 	searchForTitle: function( title ) {
 		var temp = [];

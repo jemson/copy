@@ -14,29 +14,10 @@ var HomeView = Backbone.Marionette.LayoutView.extend({
 	}
 });
 
-var FeaturedIndividual = Backbone.Marionette.ItemView.extend({
-	template: _.template('<div class="content small-5 columns" data-click><div><img class="image-holder" src="<%= image%>"></div><div class="movie-name"><%= name%></div></div>')
-});
-
-var FeaturedView = Backbone.Marionette.CollectionView.extend({
-	initialize: function(options){
-		this.collection = new Movies().getFeatures();
-	},
-	// emptyView: EmptyView,
-	childView: FeaturedIndividual,
-	// className: 'position'
-});
 
 
-var CinemaIndividual = Backbone.Marionette.ItemView.extend({
-	template: _.template('<div class="content small-5 columns" data-click><div><img class="image-holder" src="<%= image%>"></div><div class="movie-name"><%= name%></div></div>')
-});
 
-var CinemaView = Backbone.Marionette.CollectionView.extend({
-	initialize: function(options){
-		this.collection = new Movies().getCinemas();
-	},
-	// emptyView: EmptyView,
-	childView: CinemaIndividual,
-	// className: 'position'
-});
+
+
+
+

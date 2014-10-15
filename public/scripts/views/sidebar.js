@@ -12,7 +12,7 @@ var SideBarIndividual = Backbone.Marionette.ItemView.extend({
 				App.mainRegion.show(content);
 			break;
 			case 'genres':
-				var content = new GenreCollectionView({collection: categories});
+				var content = new GenreCollectionView({collection: new Categories()});
 				App.mainRegion.show(content);
 			break;
 			case 'cinema':

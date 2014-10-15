@@ -1,4 +1,4 @@
-var IndividualView = Backbone.Marionette.ItemView.extend({
+var MovieIndividualView = Backbone.Marionette.ItemView.extend({
 	template: '#content',
 	events: {
 		'click [data-click]': 'showDetails'

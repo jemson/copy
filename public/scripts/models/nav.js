@@ -1,0 +1,1 @@
+var Nav = Backbone.Model.extend();

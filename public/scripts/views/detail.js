@@ -1,6 +1,6 @@
 var DetailView = Backbone.Marionette.ItemView.extend({
 	template: '#details',
-	className: 'small-13 columns',
+	className: 'small-13 columns home-wrapper2',
 	serializeData: function(){
 		var data = {};
 		data =  _.partial(this.serializeModel, this.model).apply(this, arguments);
